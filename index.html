@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAA Company - Internship Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/imaa-logo.png" alt="IMAA Logo">
+                </div>
+            </div>
+            <h1>IMAA Company</h1>
+            <p>Apply for our exclusive internship program today</p>
+        </header>
+
+        <div class="card">
+            <h2>Internship Application</h2>
+            <form id="internshipForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    <div class="error-message" id="fullName-error">Please enter your full name</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <div class="error-message" id="email-error">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="university">University Name</label>
+                    <input type="text" id="university" name="university" placeholder="Enter your university name" required>
+                    <div class="error-message" id="university-error">Please enter your university name</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="Male" required> Male
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="Female"> Female
+                        </label>
+                    </div>
+                    <div class="error-message" id="gender-error">Please select your gender</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="graduationStatus">Graduation Status</label>
+                    <select id="graduationStatus" name="graduationStatus" required>
+                        <option value="">Select status</option>
+                        <option value="Graduated">Graduated</option>
+                        <option value="Not Yet">Not Yet</option>
+                    </select>
+                    <div class="error-message" id="graduationStatus-error">Please select your graduation status</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="major">Major</label>
+                    <select id="major" name="major" required>
+                        <option value="">Select your major</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Business Information Technology">Business Information Technology</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Electronics Engineering">Electronics Engineering</option>
+                        <option value="Telecommunications Engineering">Telecommunications Engineering</option>
+                    </select>
+                    <div class="error-message" id="major-error">Please select your major</div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 IMAA Company. All rights reserved. | Follow us on Instagram <a href="https://instagram.com/imaa.company" style="color: var(--primary); text-decoration: none;">@imaa.company</a>
+    </footer>
+
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Application Successfully Submitted!</h3>
+            <div class="modal-body">
+                <p>Your application has been received. You will now be redirected to WhatsApp to send your details.</p>
+                <p><strong>Important:</strong> Please remember to send your CV separately via WhatsApp after submitting your details, as we cannot automatically transfer files.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn primary-btn" id="continueToWhatsApp">Continue to WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="spinner"></div>
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
